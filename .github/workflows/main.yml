@@ -16,7 +16,11 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
+    # 11
+    -name change diretorie
+      run: cd my_app
     # 12
+    
     - name: Get dependencies
       run: flutter pub get
 
