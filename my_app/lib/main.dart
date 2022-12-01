@@ -105,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'Pagina de teste com integração no github',
             ),
-
+    	       'Pagina de build feita no git com git actions.',
+            ),
           ],
         ),
       ),
