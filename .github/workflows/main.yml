@@ -24,11 +24,11 @@ jobs:
     - name: Get pwd
       run: pwd
     
-    - name: change
-      run: cd my_app
+  #  - name: change
+  #    run: cd my_app
 
-    - name: Get pwd2
-      run: pwd
+  #  - name: Get pwd2
+  #    run: pwd
     
     # 12
     
