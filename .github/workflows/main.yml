@@ -11,7 +11,16 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
-    
+
+    steps:
+      uses: actions/checkout@v3
+      uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+    - run: flutter pub get
+    - run: flutter test
+    - run: flutter build web
+
     # HTTP Server Action - para teste de pagina
     # https://github.com/marketplace/actions/http-server-action
 
