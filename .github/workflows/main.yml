@@ -16,13 +16,11 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
-    # 11
-    - name change diretorie
-      run: |
-      	pwd
-      	cd my_app
-      	pwd
-      	
+    
+    - name: Get pwd
+      run: pwd
+    
+    
     # 12
     
     - name: Get dependencies
