@@ -18,7 +18,11 @@ jobs:
         channel: 'stable'
     # 11
     - name change diretorie
-      run: cd my_app
+      run: |
+      	pwd
+      	cd my_app
+      	pwd
+      	
     # 12
     
     - name: Get dependencies
