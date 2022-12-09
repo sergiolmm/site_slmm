@@ -111,6 +111,12 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'colocando no yml o caminhdo de referencia....',
             ),
+			const Text(
+              '....',
+            ),
+			const Text(
+              'Demonstracao na aula de GCS PUCC....',
+            ),
           ],
         ),
       ),
