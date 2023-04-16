@@ -5,7 +5,31 @@ on:
 
 name: Deploy website on push
 jobs:
-  windows-deploy:
+  mac-deploy:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./my_app   
+    steps:
+    - uses: actions/checkout@v3
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+        architecture: x64
+        
+    - run: flutter pub get
+    - run: flutter config --enable-macos-desktop
+    - run: flutter build macos        
+
+    - name: gera app macos
+      uses: actions/upload-artifact@v3
+      with:
+          name: release-macos
+          # Path to the release files          
+          path: my_app/build/macos/Build/Products/Release/*.app
+          
+          
+  WinDeploy:        
     name: WinDeploy
     runs-on: windows-latest
     defaults:
